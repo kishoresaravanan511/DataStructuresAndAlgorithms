@@ -17,6 +17,16 @@ public class Demo
 //
 //        l.retainAll(l1);  //common objects in both Sets.
 //        System.out.println(l);
+        ArrayList<Integer> a = new ArrayList<>(); //List(subInterface) does not have ensureCapacity , but it has alternative , that is capacity is passed through ArrayList<>() , constructors..
+        //optimiizing the resizing of an dynamic array, strict O(1),not amortized O(1)
+        a.ensureCapacity(1000);  //efficient for known data information like for loop,we know the exact elements to be stored in that list
+
+        for(int i=1;i<=60;i++)
+        {
+            a.add(i);
+        }
+        a.trimToSize();   //removes the unused internal capacity of a list..not remove any elements . just remove the unused capacity..
+        System.out.println(a.size()); //Capacity is like tables in restaurant,size is like customers filled in the tables
 
         LinkedHashSet<Integer> l = new LinkedHashSet<>();
         l.add(10);
