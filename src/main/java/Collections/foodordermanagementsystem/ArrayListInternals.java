@@ -3,6 +3,14 @@ package Collections.foodordermanagementsystem;
 import java.util.*;
 public class ArrayListInternals
 {
+    //java arraylist class uses the formula (size+1) > capacity ,
+    // which triggers the grow() in arraylist class, then after that ,
+    // dynamic size of an arraylist grows ,
+    // by the principle of oldcapacity of an present arraylist * 1.5
+    // changes the present list capacity into new arraylist of updated capacity
+    // which ofcourse copy the references of old arraylist into new by copying their references
+    // not the exact object, which leads to O(n) , then said as amortized O(1).
+
     public static void main(String[] args) {
         List<Integer> l = new ArrayList<>(100);  //ensureCapacity through constructors
         ArrayList<Integer> aL = new ArrayList<>();

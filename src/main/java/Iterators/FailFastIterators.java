@@ -12,7 +12,7 @@ public class FailFastIterators {
 
         while(it.hasNext())
         {
-            System.out.println(it.next().toUpperCase());
+            System.out.println(it.next());
             //Fail-Fast Iterators...
             l.add("ashwin");   //ConcurrentModificationException , modifies the structure of Arraylist internally , varying  modCount and expModCount from list and iterators , so it leads to Exception.
         }
