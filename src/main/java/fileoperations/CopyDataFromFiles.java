@@ -1,10 +1,12 @@
 package fileoperations;
 
 import java.io.*;
+import java.util.*;
 public class CopyDataFromFiles
 {
     public static void main(String[] args)
     {
+        Scanner sc = new Scanner(System.in);
         try {
             BufferedReader br = new BufferedReader(new FileReader("Example.txt"));
             BufferedWriter bw = new BufferedWriter((new FileWriter("Target.txt")));
@@ -21,6 +23,10 @@ public class CopyDataFromFiles
         catch(IOException e)
         {
             System.out.println(e.getMessage());
+        }
+        finally
+        {
+            sc.close();
         }
     }
 }
