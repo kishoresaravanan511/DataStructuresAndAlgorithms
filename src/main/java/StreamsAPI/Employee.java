@@ -15,6 +15,31 @@ public class Employee implements Comparable<Employee>
         this.dept = dept;
     }
 
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
+    public void setDept(String dept)
+    {
+        this.dept = dept;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public Integer getId()
+    {
+        return id;
+    }
+    public String getDept()
+    {
+        return dept;
+    }
+
     @Override
     public int compareTo(Employee that)
     {
