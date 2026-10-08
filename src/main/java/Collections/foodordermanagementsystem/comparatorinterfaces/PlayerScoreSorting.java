@@ -1,4 +1,4 @@
-package Collections.foodordermanagementsystem.comparatoriinterfaces;
+package Collections.foodordermanagementsystem.comparatorinterfaces;
 
 import java.util.*;
 

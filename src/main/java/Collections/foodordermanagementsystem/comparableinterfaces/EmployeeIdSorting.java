@@ -34,7 +34,7 @@ class Employee implements Comparable<Employee>
     }
 
     @Override
-    public int compareTo(Employee that)
+    public int compareTo(Employee that)   //must implement in same class - comparable
     {
         return Integer.compare(that.id,this.id);
     }

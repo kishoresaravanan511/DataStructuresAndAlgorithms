@@ -15,6 +15,7 @@ public class Employee implements Comparable<Employee>
         this.dept = dept;
     }
 
+    //getters and setters
     public void setName(String name)
     {
         this.name = name;
@@ -40,7 +41,7 @@ public class Employee implements Comparable<Employee>
         return dept;
     }
 
-    @Override
+    @Override  //imeediate implementation of comparable
     public int compareTo(Employee that)
     {
         return Integer.compare(this.id%10 , that.id%10);
@@ -49,6 +50,6 @@ public class Employee implements Comparable<Employee>
     @Override
     public String toString()
     {
-        return name+" "+id+" "+dept;
+        return name+ " " +id+ " " +dept;
     }
 }

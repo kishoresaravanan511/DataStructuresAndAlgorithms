@@ -1,6 +1,5 @@
-package Collections.foodordermanagementsystem.comparatoriinterfaces;
+package Collections.foodordermanagementsystem.comparatorinterfaces;
 
-import javax.xml.stream.events.StartDocument;
 import java.util.*;
 public class IntegerSecondDigit
 {

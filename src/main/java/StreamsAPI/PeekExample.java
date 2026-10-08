@@ -8,7 +8,7 @@ public class PeekExample {
 
         List<Integer> ans = l.stream()
                 .map(n -> n*2)
-                .peek(System.out::println)  //used to print/inspect the elements as they pass through stream pipeline
+                .peek(System.out::println)  //also intermediate operation, used to print/inspect the elements as they pass through stream pipeline
                 .collect(Collectors.toList());
 
         System.out.println(ans);
