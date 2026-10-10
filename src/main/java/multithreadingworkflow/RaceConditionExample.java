@@ -5,13 +5,15 @@ public class RaceConditionExample
     public static void main(String[] args) throws InterruptedException
     {
         Bank b1 = new Bank();
-        Bank b2 = new Bank();
-
 
         Thread t1 = new Thread(b1);
-        Thread t2 = new Thread(b2);
+        Thread t2 = new Thread(b1);
+
         t1.start();
         t2.start();
+
+        //t2.sleep(1000);  //blocked state
+        //System.out.println(t2.getState());
     }
 }
 class Bank implements Runnable
@@ -24,6 +26,13 @@ class Bank implements Runnable
     }
     synchronized void withdraw(int amt)
     {
+//        //just example for blocked state
+//        while(true)
+//        {
+//            //infinite loop makes t2 in blocked state everytime
+//        }
+
+
         if(amt <= bal) {
             try
             {
@@ -36,8 +45,9 @@ class Bank implements Runnable
             bal -= amt;
             System.out.println(Thread.currentThread().getName() + " Balance " + bal );
         }
-//        else {
+ //       else {
 //            System.out.println("Insufficient balance");
 //        }
+
     }
 }

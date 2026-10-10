@@ -41,7 +41,7 @@ public class Employee implements Comparable<Employee>
         return dept;
     }
 
-    @Override  //imeediate implementation of comparable
+    @Override  //immediate implementation of comparable
     public int compareTo(Employee that)
     {
         return Integer.compare(this.id%10 , that.id%10);
