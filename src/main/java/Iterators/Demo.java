@@ -36,7 +36,6 @@ public class Demo
         l.add(40);
         l.add(null);
         
-
         System.out.println(l.size());
 
 

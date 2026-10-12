@@ -17,7 +17,6 @@ public class IntegerSecondDigit
 ////                    return -1;
 ////                }
 ////            }
-////
 ////        };
 //        List<Integer> l = new ArrayList<>(Arrays.asList(18,21,97,63,86));
 //        //lambda Expression

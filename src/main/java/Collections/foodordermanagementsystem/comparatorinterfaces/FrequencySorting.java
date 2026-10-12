@@ -16,7 +16,6 @@ public class FrequencySorting {
         {
             l.add(x);
         }
-
         Comparator<Integer> com = new Comparator<>() {
             @Override
             public int compare(Integer i , Integer j)
