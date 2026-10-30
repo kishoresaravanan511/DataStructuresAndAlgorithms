@@ -1,19 +1,19 @@
-package LinkedList.SinglyLinkedList;
+package LinkedList;
 
 public class NodeCreationAndTraversal {
     public static void main(String[] args)
     {
         LinkedList ll = new LinkedList();
-//        ll.insertAtBeginning(10);
-//        ll.insertAtBeginning(20);
-//        ll.insertAtBeginning(30);
-//        ll.insertAtBeginning(40);
+        ll.insertAtBeginning(10);
+        ll.insertAtBeginning(20);
+        ll.insertAtBeginning(30);
+        ll.insertAtBeginning(40);
 
-        ll.insertAtEnd(90);
-        ll.insertAtEnd(80);
-        ll.insertAtEnd(70);
-        ll.insertAtEnd(60);
-        ll.insertAtEnd(40);
+//        ll.insertAtEnd(90);
+//        ll.insertAtEnd(80);
+//        ll.insertAtEnd(70);
+//        ll.insertAtEnd(60);
+//        ll.insertAtEnd(40);
 
         //ll.deleteAtBeginning();
 
@@ -21,7 +21,9 @@ public class NodeCreationAndTraversal {
 
         ll.insertNodeAtIndex(4,50);
 
+        System.out.println("Linked List: ");
         ll.display();
+        System.out.println("\n" + "Sum of Nodes " + ll.sumOfNodes());
     }
 }
 class Node
@@ -102,7 +104,17 @@ class LinkedList
         nn.next = curr.next;
         curr.next = nn;
     }
-
+    public int sumOfNodes()
+    {
+        Node curr = head;
+        int sum = 0;
+        while(curr != null)
+        {
+            sum+=curr.data;
+            curr = curr.next;
+        }
+        return sum;
+    }
     public void display()
     {
         Node temp = head;
